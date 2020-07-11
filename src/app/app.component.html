@@ -18,7 +18,7 @@
   </div>
   <div class="navbar navbar-dark bg-dark shadow-sm">
     <div class="container d-flex justify-content-between">
-      <a class="navbar-brand d-flex align-items-center">
+      <a routerLink="/" class="navbar-brand d-flex align-items-center">
         <strong>SuperheroesApp</strong>
       </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
@@ -28,15 +28,7 @@
   </div>
 </header>
 
-<main role="main">
-  <section class="jumbotron text-center">
-    <div class="container">
-      <h1 class="title">Superheroes</h1>
-      <p class="lead text-muted">This is a sample app made with Angular in order to acquire knowledge and mastery with the framework.</p>
-      <p class="lead text-muted">In this app I will make calls to a superheroes API and I will get and process the data.</p>
-    </div>
-  </section>
-</main>
+<router-outlet></router-outlet>
 
 <footer class="text-muted">
   <div class="container">
@@ -47,4 +39,3 @@
     <p>Want to see more funny projects? Check out my <a href="https://www.github.com/rootkit0">GitHub</a>!</p>
   </div>
 </footer>
-<router-outlet></router-outlet>

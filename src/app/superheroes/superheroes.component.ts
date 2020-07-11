@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ApiService } from '../services/api.service';
+import { Superhero } from '../models/superhero';
 
 @Component({
   selector: 'app-superheroes',
@@ -7,9 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SuperheroesComponent implements OnInit {
 
-  constructor() { }
+  private superheroes: Superhero[];
+
+  constructor(private apiService: ApiService) { }
 
   ngOnInit() {
+    //Get superheroes
+    this.apiService.getSuperheroes().subscribe(
+      data => {
+        this.superheroes = data;
+      }
+    )
   }
-
 }
