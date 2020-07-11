@@ -1,3 +1,17 @@
-<div *ngFor="let superhero of superheroes">
-    <h2>{{ superhero.name }}</h2>
+<div class="container content">
+    <div class="row">
+        <div *ngFor="let superhero of superheroes" class="col-sm-3">
+            <div class="card mb-4 shadow-sm">
+                <img src="{{ superhero.images.sm }}" class="bd-placeholder-img card-img-top"/>
+                <div class="card-body">
+                    <h5 class="card-title"><b>{{ superhero.name }}</b></h5>
+                    <span class="card-text"><b>Full name:</b> {{ superhero.biography.fullName }}</span><br>
+                    <span class="card-text"><b>Race:</b> {{ superhero.appearance.race }}</span><br>
+                    <span class="card-text"><b>Publisher:</b> {{ superhero.biography.publisher }}</span>
+                    <p></p>
+                    <button type="button" class="btn btn-sm btn-outline-primary">See more</button>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
