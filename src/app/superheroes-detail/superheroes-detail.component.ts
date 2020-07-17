@@ -24,7 +24,6 @@ export class SuperheroesDetailComponent implements OnInit {
   showLegend = true;
   showXAxisLabel = false;
   showYAxisLabel = false;
-
   colorScheme = {
     domain: ['#0000ff', '#ff0000', '#ffff00', '#008000', '#ffa500', '#b83434']
   };

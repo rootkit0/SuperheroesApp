@@ -10,6 +10,7 @@ import { Superhero } from '../models/superhero';
 export class SuperheroesComponent implements OnInit {
 
   private superheroes: Superhero[];
+  private superheroesFiltered: Superhero[];
 
   constructor(private apiService: ApiService) { }
 
@@ -18,7 +19,14 @@ export class SuperheroesComponent implements OnInit {
     this.apiService.getSuperheroes().subscribe(
       data => {
         this.superheroes = data;
+        this.superheroesFiltered = data;
       }
     )
+  }
+
+  filtrar(query) {
+    this.superheroes = this.superheroesFiltered.filter(function(superhero) {
+      return superhero.name.toLowerCase().indexOf(query.toLowerCase()) != -1;
+    })
   }
 }

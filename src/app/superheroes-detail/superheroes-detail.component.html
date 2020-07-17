@@ -1,17 +1,19 @@
 <div class="container content">
   <div class="row">
-    <div class="card col-md-4">
-      <div class="card-header">
-        <h4><b>{{ superhero.name }}</b></h4>
+    <div class="col-md-4">
+      <div class="card">
+        <div class="card-header">
+          <h4><b>{{ superhero.name }}</b></h4>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item"><b>Full name:</b> {{ superhero.biography.fullName }}</li>
+          <li class="list-group-item"><b>Race and gender:</b> {{ superhero.appearance.race }}, {{ superhero.appearance.gender }}</li>
+          <li class="list-group-item"><b>Place of birth:</b> {{ superhero.biography.placeOfBirth }}</li>
+          <li class="list-group-item"><b>First appearance:</b> {{ superhero.biography.firstAppearance }}</li>
+          <li class="list-group-item"><b>Publisher:</b> {{ superhero.biography.publisher }}</li>
+          <li class="list-group-item"><b>Occupation:</b> {{ superhero.work.occupation }}</li>
+        </ul>
       </div>
-      <ul class="list-group list-group-flush">
-        <li class="list-group-item"><b>Full name:</b> {{ superhero.biography.fullName }}</li>
-        <li class="list-group-item"><b>Race and gender:</b> {{ superhero.appearance.race }}, {{ superhero.appearance.gender }}</li>
-        <li class="list-group-item"><b>Place of birth:</b> {{ superhero.biography.placeOfBirth }}</li>
-        <li class="list-group-item"><b>First appearance:</b> {{ superhero.biography.firstAppearance }}</li>
-        <li class="list-group-item"><b>Publisher:</b> {{ superhero.biography.publisher }}</li>
-        <li class="list-group-item"><b>Occupation:</b> {{ superhero.work.occupation }}</li>
-      </ul>
     </div>
     <div class="col-md-8">
       <ngx-charts-bar-vertical
