@@ -9,7 +9,7 @@
                     <span class="card-text"><b>Race:</b> {{ superhero.appearance.race }}</span><br>
                     <span class="card-text"><b>Publisher:</b> {{ superhero.biography.publisher }}</span>
                     <p></p>
-                    <button type="button" class="btn btn-sm btn-outline-primary">See more</button>
+                    <button routerLink="/superheroes/{{ superhero.id }}" type="button" class="btn btn-sm btn-outline-primary">See more</button>
                 </div>
             </div>
         </div>
